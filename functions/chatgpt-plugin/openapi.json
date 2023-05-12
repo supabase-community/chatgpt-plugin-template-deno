@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "TODO Plugin",
+    "description": "A plugin that allows the user to create and manage a TODO list using ChatGPT. If you do not know the user's username, ask them first before making queries to the plugin. Otherwise, use the username \"user\".",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/chatgpt-plugin/todos/{username}": {
+      "get": {
+        "operationId": "getTodos",
+        "summary": "Get the list of todos",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "username",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "The name of the user."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getTodosResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "getTodosResponse": {
+        "type": "object",
+        "properties": {
+          "todos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The list of todos."
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
