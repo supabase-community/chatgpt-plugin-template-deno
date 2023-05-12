@@ -15,7 +15,10 @@ deno run --allow-read --allow-write scripts/generate-openapi-spec.ts
 ## Run locally
 
 - Build and start the container: `docker compose up --build`
-- Visit http://localhost:8000/chatgpt-plugin
+- Visit
+  - http://localhost:8000/chatgpt-plugin
+  - http://localhost:8000/.well-known/ai-plugin.json
+  - http://localhost:8000/chatgpt-plugin/openapi.json
 
 File changes in the `/functions` directory will automatically be detected, except for the `/main/index.ts` function as it is a long running server.
 

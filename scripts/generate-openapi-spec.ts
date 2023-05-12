@@ -8,6 +8,7 @@ const options = {
       description: `A plugin that allows the user to create and manage a TODO list using ChatGPT. If you do not know the user's username, ask them first before making queries to the plugin. Otherwise, use the username "global".`,
       version: "1.0.0",
     },
+    servers: [{ url: "http://localhost:8000" }],
   },
   apis: ["./functions/chatgpt-plugin/index.ts"], // files containing annotations as above
 };
