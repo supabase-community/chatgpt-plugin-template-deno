@@ -2,6 +2,8 @@
 
 Template for building ChatGPT Plugins in TypeScript that run on Supabase's custom Deno Edge Runtime.
 
+[![video tutorial](https://img.youtube.com/vi/4pa-eEXQHJQ/0.jpg)](https://www.youtube.com/watch?v=4pa-eEXQHJQ)
+
 Note: This is a TypeScript port of OpenAI's official ["[...] simple todo list plugin with no auth" Python example](https://platform.openai.com/docs/plugins/examples).
 
 ## Generate OpenAPI spec
@@ -19,6 +21,7 @@ deno run --allow-read --allow-write scripts/generate-openapi-spec.ts
   - http://localhost:8000/chatgpt-plugin
   - http://localhost:8000/.well-known/ai-plugin.json
   - http://localhost:8000/chatgpt-plugin/openapi.json
+  - http://localhost:8000/chatgpt-plugin/todos/user
 
 File changes in the `/functions` directory will automatically be detected, except for the `/main/index.ts` function as it is a long running server.
 
@@ -27,7 +30,7 @@ File changes in the `/functions` directory will automatically be detected, excep
 - Clone this repository.
 - Change `http://localhost:8000` to your Fly domain in the [`/main/ai-plugins.json` file](./functions/main/ai-plugins.json)
 - Open `fly.toml` and update the app name and optionally the region etc.
-- In your terminal, run `fly apps create` and sepcify the app name you just set in your `fly.toml` file.
+- In your terminal, run `fly apps create` and specify the app name you just set in your `fly.toml` file.
 - Finally, run `fly deploy`.
 
 ## Install the Plugin in the [ChatGPT UI](https://chat.openai.com/)
