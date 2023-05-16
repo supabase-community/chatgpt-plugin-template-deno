@@ -1,6 +1,10 @@
-# ChatGPT Plugin Template Deno
+# ChatGPT Plugin Template with Supabase Edge Runtime
 
-Template for building ChatGPT Plugins in TypeScript that run on Supabase's custom Deno Edge Runtime.
+Template for building ChatGPT Plugins in TypeScript that run on [Supabase Edge Runtime](https://supabase.com/blog/edge-runtime-self-hosted-deno-functions).
+
+For a full walk through, read the blog post: [Building ChatGPT Plugins with Supabase Edge Runtime](https://supabase.com/blog/building-chatgpt-plugins-template). 
+
+Or watch the video tutorial:
 
 [![video tutorial](https://img.youtube.com/vi/4pa-eEXQHJQ/0.jpg)](https://www.youtube.com/watch?v=4pa-eEXQHJQ)
 
